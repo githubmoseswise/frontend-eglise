@@ -1,8 +1,7 @@
-// src/api.js
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8000/api', // URL de ton backend Laravel
+  baseURL: import.meta.env.VITE_API_BASE_URL, // Utilise la variable d'environnement
   headers: {
     'Content-Type': 'application/json',
   },
